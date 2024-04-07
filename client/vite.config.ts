@@ -14,4 +14,11 @@ export default defineConfig({
       '@store': path.resolve(__dirname, './src/store'),
     },
   },
+  server: {
+    host: true,
+    port: 5173,
+    watch: {
+      usePolling: true,
+    },
+  },
 });
