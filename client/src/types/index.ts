@@ -78,6 +78,7 @@ export interface TaskItemProps {
   description: string;
   priority: string;
   dueDate: string;
+  columnId?: number;
 }
 
 export interface BoardCardProps {

@@ -28,16 +28,19 @@ export const TaskItem = ({
   description,
   priority,
   dueDate,
+  columnId
 }: TaskItemProps) => {
   const { boardId } = useParams();
   const dispatch = useAppDispatch();
-  const columnList = useAppSelector((state) => state.taskColumn.columnList);
   const isOpenEditTaskModal = useAppSelector(
     (state) => state.modal[`editTask_${taskId}`],
   );
   const isOpenTaskDetails = useAppSelector(
     (state) => state.modal[`taskDetails_${taskId}`],
   );
+
+  const columnList = useAppSelector((state) => state.taskColumn.columnList);
+  const filteredColumnList = columnList.filter(column => column.id !== columnId);
 
   const handleDeleteTask = async () => {
     await dispatch(removeTask(+taskId));
@@ -62,7 +65,6 @@ export const TaskItem = ({
       column: columnId,
     };
     await dispatch(editTask(data));
-    toast.success(`Task successfully moved to another column.`);
     if (boardId) {
       dispatch(getAllColumns(+boardId));
     }
@@ -140,7 +142,7 @@ export const TaskItem = ({
           </div>
         </div>
         <Select
-          list={columnList}
+          list={filteredColumnList}
           placeholder='Move to'
           onOptionSelect={handleMoveTaskToAnotherColumn}
         />

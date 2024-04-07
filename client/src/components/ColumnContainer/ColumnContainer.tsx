@@ -125,6 +125,7 @@ export const ColumnContainer = ({
                           description={description}
                           priority={priority}
                           dueDate={dueDate}
+                          columnId={columnId}
                         />
                       </div>
                     )}
