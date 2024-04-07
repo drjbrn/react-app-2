@@ -71,7 +71,7 @@ export const BoardEditor = ({ isNew, isEdit, boardId }: BoardEditorProps) => {
           >
             <Controller
               name='title'
-              defaultValue={isEdit && board?.title}
+              defaultValue={isEdit ? board?.title : ''}
               control={methods.control}
               rules={{
                 required: true,
