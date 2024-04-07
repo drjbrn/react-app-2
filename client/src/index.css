@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-montserrat text-base not-italic font-normal leading-[150%] text-black bg-[#d2d2d2];
+  }
+
+  .form-wrap {
+    @apply w-full grid grid-cols-[1fr] gap-y-[0.3rem] items-start text-sm font-normal leading-4 text-[#828282] sm:gap-3 sm:grid-cols-[125px_1fr];
+  }
+}
