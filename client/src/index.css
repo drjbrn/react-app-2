@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-montserrat text-base not-italic font-normal leading-[150%] text-black bg-[#d2d2d2];
+  }
+
+  .form-wrap {
+    @apply w-full grid grid-cols-[1fr] gap-y-[0.3rem] items-start text-sm font-normal leading-4 text-[#828282] sm:gap-3 sm:grid-cols-[125px_1fr];
+  }
+}
