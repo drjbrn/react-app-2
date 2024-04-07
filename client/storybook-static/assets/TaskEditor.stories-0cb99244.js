@@ -1,5 +1,0 @@
-import{j as e}from"./jsx-runtime-ed146b25.js";import{P as i,d as p}from"./axios.api-b23b7fa1.js";import{T as a}from"./TaskEditor-a810f588.js";/* empty css              */import"./index-c6dae603.js";import"./Button-65c196bc.js";import"./DropdownMenu-134c1456.js";import"./transition-349f38e8.js";import"./Input-73fe76b1.js";import"./Select-93b2da57.js";import"./taskItemThunks-b75d5f6b.js";import"./index.esm-73804e6c.js";import"./react-toastify.esm-fa44d8c4.js";import"./taskColumnThunks-1145476d.js";import"./priorityList-f9d72f84.js";const d=({children:m})=>e.jsx(i,{store:p,children:m}),_={title:"Components/TaskEditor",component:a,parameters:{layout:"centered"}},r={render:()=>e.jsx(d,{children:e.jsx(a,{isNewTask:!0})})};var o,t,s;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
-  render: () => <MockedStore>\r
-      <TaskEditor isNewTask />\r
-    </MockedStore>
-}`,...(s=(t=r.parameters)==null?void 0:t.docs)==null?void 0:s.source}}};const P=["CreateNewTask"];export{r as CreateNewTask,P as __namedExportsOrder,_ as default};

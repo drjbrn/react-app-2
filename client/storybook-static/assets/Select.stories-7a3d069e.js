@@ -1,3 +1,0 @@
-import{j as a}from"./jsx-runtime-ed146b25.js";import{p as i}from"./priorityList-f9d72f84.js";import{S as s}from"./Select-93b2da57.js";/* empty css              */import"./index-c6dae603.js";import"./transition-349f38e8.js";const u={title:"Components/UI/Select",component:s,parameters:{layout:"centered"}},e={render:()=>a.jsx(s,{list:i,placeholder:"Priority",className:"w-40"})};var r,t,o;e.parameters={...e.parameters,docs:{...(r=e.parameters)==null?void 0:r.docs,source:{originalSource:`{
-  render: () => <Select list={priorityList} placeholder='Priority' className='w-40' />
-}`,...(o=(t=e.parameters)==null?void 0:t.docs)==null?void 0:o.source}}};const f=["Default"];export{e as Default,f as __namedExportsOrder,u as default};

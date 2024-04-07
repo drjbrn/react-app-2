@@ -1,5 +1,0 @@
-import{j as t}from"./jsx-runtime-ed146b25.js";import{P as p,d}from"./axios.api-b23b7fa1.js";import{T as a}from"./TaskDetailsModal-e5d6d895.js";/* empty css              */import"./index-c6dae603.js";import"./Button-65c196bc.js";import"./DropdownMenu-134c1456.js";import"./transition-349f38e8.js";import"./Input-73fe76b1.js";import"./Select-93b2da57.js";import"./taskItemThunks-b75d5f6b.js";import"./PencilSquareIcon-3728169b.js";const m=({children:i})=>t.jsx(p,{store:d,children:i}),S={title:"Components/TaskDetailsModal",component:a,parameters:{layout:"centered"}},e={render:()=>t.jsx(m,{children:t.jsx(a,{id:1,title:"Task 1",description:"Create new tasks",priority:"Low",dueDate:"22.04.2024"})})};var r,o,s;e.parameters={...e.parameters,docs:{...(r=e.parameters)==null?void 0:r.docs,source:{originalSource:`{
-  render: () => <MockedStore>\r
-      <TaskDetailsModal id={1} title='Task 1' description='Create new tasks' priority='Low' dueDate='22.04.2024' />\r
-    </MockedStore>
-}`,...(s=(o=e.parameters)==null?void 0:o.docs)==null?void 0:s.source}}};const y=["Default"];export{e as Default,y as __namedExportsOrder,S as default};
