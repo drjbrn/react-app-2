@@ -147,7 +147,7 @@ export const TaskEditor = ({ isNewTask, isEdit, taskId }: TaskEditorProps) => {
                     {...field}
                     maxLength={1000}
                     placeholder='Task description'
-                    className='h-32 resize-none py-3 px-4 block w-full border-2 border-solid border-[#f4f4f4] rounded text-sm focus:border-blue-700 focus:ring-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600'
+                    className='h-32 resize-none py-3 px-4 block w-full border-2 border-solid border-[#f4f4f4] rounded text-sm focus:outline-none focus:border-blue-700 focus:ring-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600'
                   />
                 </div>
               )}
@@ -198,7 +198,7 @@ export const TaskEditor = ({ isNewTask, isEdit, taskId }: TaskEditorProps) => {
                       handleValueChange(newValue);
                       field.onChange(newValue);
                     }}
-                    inputClassName='w-full border-2 border-solid border-[#f4f4f4] rounded text-sm focus:border-blue-700 focus:ring-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 py-3 px-4 placeholder-[#818181]'
+                    inputClassName='w-full border-2 border-solid border-[#f4f4f4] rounded text-sm focus:outline-none focus:border-blue-700 focus:ring-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600 py-3 px-4 placeholder-[#818181]'
                   />
                 </div>
               )}
