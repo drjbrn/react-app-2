@@ -19,7 +19,7 @@ export const TaskDetailsModal = ({
   const handleEditTask = async () => {
     await dispatch(getTaskById(+id));
     dispatch(closeModal(`taskDetails_${id}`));
-    dispatch(openModal('editTask'));
+    dispatch(openModal(`editTask_${id}`));
   };
 
   return (
