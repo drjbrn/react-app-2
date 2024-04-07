@@ -8,7 +8,10 @@ import { ActivityLogModule } from './activity-log/activity-log.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: [`.env.${process.env.NODE_ENV}`],
+    }),
     BoardModule,
     TaskColumnModule,
     TaskModule,
@@ -18,17 +21,25 @@ import { ActivityLogModule } from './activity-log/activity-log.module';
       useFactory: (configService: ConfigService) => ({
         type: 'postgres',
         port: configService.get('DB_PORT'),
-        host: configService.get('DB_HOST'),
-        username: configService.get('DB_USERNAME'),
-        password: configService.get('DB_PASSWORD'),
-        database: configService.get('DB_NAME'),
-        // host: process.env.POSTGRES_HOST,
-        // username: process.env.POSTGRES_USER,
-        // password: process.env.POSTGRES_PASSWORD,
-        // database: process.env.POSTGRES_DATABASE,
+        host:
+          configService.get('NODE_ENV') === 'production'
+            ? configService.get('POSTGRES_HOST')
+            : configService.get('DB_HOST'),
+        username:
+          configService.get('NODE_ENV') === 'production'
+            ? configService.get('POSTGRES_USER')
+            : configService.get('DB_USERNAME'),
+        password:
+          configService.get('NODE_ENV') === 'production'
+            ? configService.get('POSTGRES_PASSWORD')
+            : configService.get('DB_PASSWORD'),
+        database:
+          configService.get('NODE_ENV') === 'production'
+            ? configService.get('POSTGRES_DATABASE')
+            : configService.get('DB_NAME'),
         synchronize: true,
         entities: [__dirname + '/**/*.entity{.js, .ts}'],
-        // ssl: true,
+        ssl: configService.get('NODE_ENV') === 'production',
       }),
       inject: [ConfigService],
     }),
